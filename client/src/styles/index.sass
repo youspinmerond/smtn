@@ -1,0 +1,214 @@
+@import ./consts
+@import 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap'
+
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+body
+    font-family: 'Inter', sans-serif
+
+header
+    border-bottom: 1px solid black
+    box-shadow: 0 1px 2px gray
+
+nav
+    display: flex
+    align-items: center
+    justify-content: flex-end
+    padding: .5rem
+
+    &>button, input, a
+        text-decoration: none
+        color: black
+        background: none
+        display: block
+        padding: .25rem
+        border: 1px solid black
+        margin-left: .25rem
+
+        outline: none
+        transition: .3s
+        &:focus, &:hover
+            border: 1px solid #333
+            background: #faa
+
+
+h1
+    margin-bottom: 1rem
+h4
+    margin-bottom: .5rem
+
+input
+    &[type="submit"],
+    &[type="button"]
+        float: right
+        display: block
+        padding: .25rem
+        border: 1px solid black
+        margin-bottom: .25rem
+        outline: none
+        transition: .3s
+        &:focus, &:hover
+            border: 1px solid #333
+            background: #afa
+            text-shadow: -4px -1px 1px #faa, 4px 1px 1px #aaf
+    &[type="text"],
+    &[type="password"]
+        display: block
+        padding: .25rem
+        border: 1px solid black
+        margin-bottom: .25rem
+        outline: none
+        transition: .3s
+        &:hover
+            background: #fe9
+        &:focus
+            border: 1px solid #333
+            background: #ffa
+a
+    font-weight: bolder
+
+textarea
+    border: 1px solid black
+
+.form
+    width: 100vw
+    height: calc(100vh - $navLength)
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+
+.wrapper
+    width: min-content
+
+.inputForm
+    display: flex
+    flex-direction: column
+    align-items: flex-end
+
+    &>input
+        width: min-content
+
+.accountButton
+    border: none
+    &:hover, &:focus
+        border: none
+
+.profile
+    margin: 2rem
+    padding: 1rem
+    border: 2px solid black
+    width: 20rem
+
+.message
+    background: #999
+
+.right
+    display: flex
+    justify-content: flex-end
+
+.redBtn
+    margin-top: .25rem
+    border: 1px solid black
+    background: #fee
+    padding: .25rem
+    transition: .2s
+
+    &:hover
+        background: #faa
+
+
+.aside
+    border-right: 2px solid black
+    width: $asideWidth
+    height: calc(100vh - $navLength)
+    padding: .5rem
+
+.section
+    width: calc(100vw - $asideWidth)
+.chat
+    border-bottom: 1px solid grey
+    outline: none
+    cursor: pointer
+
+    &:hover, &:focus
+        background: #ffb
+
+    &Message
+        width: 100%
+        border-bottom: 1px solid black
+        display: flex
+        align-items: center
+
+        &:hover
+            background: #fef
+
+        &:first-child
+            border-top: 1px solid black
+
+    &Author
+        width: 3rem
+        height: 2rem
+        border-right: 1px solid black
+        display: flex
+        align-items: center
+        justify-content: center
+
+.messageField
+    margin-left: .5rem
+
+.chats
+    display: flex
+
+.sendMessage
+    margin-top: .5rem
+
+    &Button
+        width: 34px
+        height: 26px
+
+    &Field
+        outline: none
+        min-width: calc(100% - 34px)
+        max-width: calc(100% - 34px)
+        min-height: 26px
+        max-height: 26px
+        border-right: none
+
+        &:focus
+            background: #efe
+
+
+.addChat
+    background: #dfd
+    border: 2px solid #dfd
+    display: flex
+    align-items: center
+    justify-content: center
+    cursor: pointer
+    user-select: none
+    padding: 1rem
+
+    &:hover, &:focus
+        background: #bfb
+        border: 2px solid #afb
+        text-shadow: 1px 1px 2px green
+        outline: none
+
+    &>.plus
+        font-size: 2.5625rem
+        display: flex
+        align-items: center
+        justify-content: center
+    &>.text
+        margin: 0 2rem
+
+.messageContent
+    max-width: 13rem
+    min-width: 13rem
+    
+    min-height: 2rem
+    max-height: 13rem
